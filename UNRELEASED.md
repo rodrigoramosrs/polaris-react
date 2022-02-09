@@ -6,7 +6,7 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 
 ### Enhancements
 
-### Enhancements
+- Add option to make `Thumbnail` component transparent ([#5109](https://github.com/Shopify/polaris-react/pull/5109))
 
 ### Bug fixes
 
