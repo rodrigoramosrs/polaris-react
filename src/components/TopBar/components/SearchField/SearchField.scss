@@ -35,6 +35,9 @@ $stacking-order: (
 
   &::placeholder {
     color: var(--p-text-subdued);
+
+    // Firefox sets the default opacity to 50%. To keep browsers consistent we explicitly set opacity here.
+    opacity: 1;
   }
 }
 
@@ -84,6 +87,9 @@ $stacking-order: (
   &::placeholder {
     color: var(--p-text);
     transition: (duration() - 33ms) color easing() 33ms;
+
+    // Firefox sets the default opacity to 50%. To keep browsers consistent we explicitly set opacity here.
+    opacity: 1;
   }
 
   &::-webkit-search-decoration,

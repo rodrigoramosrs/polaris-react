@@ -11,6 +11,7 @@ Use [the changelog guidelines](/documentation/Versioning%20and%20changelog.md) t
 ### Bug fixes
 
 - [ContextualSaveBar] Register `secondaryMenu` prop in frame context ([#5116](https://github.com/Shopify/polaris-react/pull/5116))
+- [TextField][searchfield] Explicitly set opacity to overwrite Firefox default 0.5 opacity for placeholders ([#5165](https://github.com/Shopify/polaris-react/pull/5165))
 
 ### Documentation
 
