@@ -137,7 +137,7 @@
     },
     "Filters": {
       "moreFilters": "Lisää suodattimia",
-      "filter": "{resourceName}-suodatin",
+      "filter": "Suodata {resourceName}",
       "noFiltersApplied": "Suodattimia ei ole käytetty",
       "cancel": "Peruuta",
       "done": "Valmis",
