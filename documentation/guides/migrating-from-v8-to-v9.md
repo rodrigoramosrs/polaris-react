@@ -93,6 +93,33 @@ const App = (props) => (
 )
 ```
 
+### Replacing custom properties from `theme` overrides
+
+If passing a custom overrides object to the `AppProvider` or `ThemeProvider`'s `theme` prop, you will need to generate and add the CSS custom properties. Use the [legacy custom properties migration](https://stackblitz.com/edit/node-vgqyft?devtoolsheight=33&file=README.md) script to generate custom property overrides based on your defined `theme` object:
+
+1. Run the [legacy custom properties migration](https://stackblitz.com/edit/node-vgqyft?devtoolsheight=33&file=README.md) script with your app's custom `theme` overrides.
+2. Copy the resulting `CustomPropertyOverrides.scss` file or style content to your application.
+3. Apply the styles to a wrapping `CustomProperties` component within the app or theme provider:
+
+```diff
+- import {AppProvider} from '@shopify/polaris';
++ import {AppProvider, CustomProperties} from '@shopify/polaris';
+
+// Generate this file using the migration script.
+import styles from './CustomPropertyOverrides.scss';
+
+const App = (props) => (
+-  <AppProvider theme={{ colors: { surface: 'rgb(0,0,0)' }}>
+-    {props.children}
+-  </AppProvider>
++  <AppProvider>
++    <CustomProperties className={styles.CustomPropertyOverrides}>
++      {props.children}
++    </CustomProperties>
++  </AppProvider>
+)
+```
+
 ### Removed all theme types, constants, and utilities
 
 A number of types, constants, and utilities have been removed with the deprecation of the `ThemeProvider` component:
